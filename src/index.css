@@ -1,13 +1,209 @@
 body {
+  padding: 0;
+  border: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(15,15,15);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+video {
+  width: 100%;
+  z-index: 1;
 }
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* video::-webkit-media-controls-enclosure {
+  display: none !important;
+} */
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+/* .video-screen{
+  width: 100%;
+  height: 100%;
+} */
+
+.full-screen {
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+.full-screen video {
+  width: 100%;
+  height: 100vh;
+}
+
+/* .mobile-full-screen
+{
+  width: 100%;
+  height: 100%;
+  margin: 80% 0%;
+} */
+
+.progress-bar {
+  width: 100%;
+}
+
+.icons {
+  height: 20px;
+  padding: 15px 10px;
+}
+
+.app{
+  position: relative;
+  width: 80%;
+}
+
+h1{
+  color: red;
+}
+
+.toolbar{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  opacity: 60%;
+  z-index: 2;
+}
+.toolbar p{
+  margin: 0;
+  padding: 15px 10px;
+}
+
+.inner-toolbar-left{
+  display: flex;
+}
+.inner-toolbar-right{
+  display: flex;
+  position: relative;
+  
+}
+
+body{
+  color: white;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.settingDropdown p{
+  margin-left: 5%;
+  padding: 0.6em;
+}
+
+.settingDropdown{
+  border-radius: 4%;
+  background-color: rgba(0, 0, 0, 0.72);
+  width: 300%;
+  text-align: left;
+  position: absolute;
+  bottom: 140%;
+  right: 10%;
+}
+
+.inner-toolbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.volume-control-container{
+  display: flex;
+}
+
+.progressbar-container {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.20);
+  position: relative;
+}
+.progressbar-container:hover {
+  transform: scaleY(2.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  /* background-color: pu÷(0, 191, 165, 1); */
+}
+
+
+.progressbar{
+  position: absolute;
+  left: 0;
+  height: 4px;
+  left: 0;
+  /* width: 20%; */
+  /* background-color: red; */
+  background-color: rgba(0, 191, 165, 1);
+
+}
+
+
+.bufferbar{
+  position: absolute;
+  height: 4px;
+  left: 0;
+  /* width: 50%; */
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.volume-slider{
+  position: relative;
+  margin: 0;
+  /* padding: 15px 10px; */
+}
+
+.play-pause{
+  width: 6%;
+  height: 6%;
+  position: absolute;
+  bottom: 47%;
+  left: 47%;
+}
+.loader{
+  width: 6%;
+  height: 6%;
+  position: absolute;
+  bottom: 47%;
+  left: 47%;
+  animation: rotate 2s linear infinite;
+  /* background-color: white; */
+}
+
+/* .landscape-mode {
+    margin: auto;
+    height: 100vh;
+  } */
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+@media only screen and (orientation: portrait) {
+   .app{
+    width: 100% !important;
+   }
+   .icons,.toolbar p,.volume-slider {
+    margin: 0%;
+    padding: 10px 6px;
+   }
+}
+
+
+/* @media screen and (orientation: landscape) {
+  
+  
+} */
+/* body {
+    width: 100vw;
+    height: 100vh;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+    overflow-x: hidden;
+  } */
+
+  .setting-options{
+    display: flex;
+    justify-content: space-between;
+  }
